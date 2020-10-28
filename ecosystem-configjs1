@@ -1,0 +1,57 @@
+module.exports = {
+  apps: [
+    {
+      name: 'strapi',
+      cwd: 'F:/Public/Zu-Tech-Strapi-API/zu-tech-strapi-api-development',
+      script: 'strapi',
+      args: 'start',
+      env: {
+        "NODE_ENV": 'development',
+        "DATABASE_HOST": 'localhost', // database endpoint
+        "DATABASE_PORT": '5432',
+        "DATABASE_NAME": 'zu-tech', // DB name
+        "DATABASE_USERNAME": 'db_user', // your username for psql
+        "DATABASE_PASSWORD": 'password', // your password for psql
+      },
+      env_staging: {
+        "NODE_ENV": 'staging',
+        "DATABASE_HOST": 'localhost', // database endpoint
+        "DATABASE_PORT": '5432',
+        "DATABASE_NAME": 'zu-tech_staging', // DB name
+        "DATABASE_USERNAME": 'db_user_staging', // your username for psql
+        "DATABASE_PASSWORD": 'password', // your password for psql
+      },
+      env_production: {
+        "NODE_ENV": 'production',
+        "DATABASE_HOST": 'localhost', // database endpoint
+        "DATABASE_PORT": '5432',
+        "DATABASE_NAME": 'zu-tech_prod', // DB name
+        "DATABASE_USERNAME": 'db_user_prod', // your username for psql
+        "DATABASE_PASSWORD": 'password', // your password for psql
+      },
+    },
+  ],
+};
+
+// module.exports = {
+//   apps : [{
+//     script: 'index.js',
+//     watch: '.'
+//   }, {
+//     script: './service-worker/',
+//     watch: ['./service-worker']
+//   }],
+
+//   deploy : {
+//     production : {
+//       user : 'SSH_USERNAME',
+//       host : 'SSH_HOSTMACHINE',
+//       ref  : 'origin/master',
+//       repo : 'GIT_REPOSITORY',
+//       path : 'DESTINATION_PATH',
+//       'pre-deploy-local': '',
+//       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
+//       'pre-setup': ''
+//     }
+//   }
+// };
