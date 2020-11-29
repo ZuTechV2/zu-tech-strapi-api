@@ -107,7 +107,11 @@ coverage
 # Strapi
 ############################
 
+<<<<<<< HEAD
 .env.*
+=======
+#.env.*
+>>>>>>> 5c57a43c5d42651c416ae18b0bb43478031a20aa
 license.txt
 exports
 .cache
